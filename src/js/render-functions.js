@@ -1,5 +1,4 @@
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+
 const gallery = document.querySelector('.gallery');
 
 export const render = (data) => {
@@ -56,6 +55,4 @@ export const render = (data) => {
     })
 
     gallery.append(fragment);
-
-    new SimpleLightbox('.gallery a');
 }
