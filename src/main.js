@@ -13,11 +13,12 @@ const gallery = document.querySelector('.gallery');
 form.addEventListener('submit', e => {
     e.preventDefault();
     gallery.innerHTML = '';
-    if(!input.value) {
+    if(!input.value.trim()) {
         iziToast.error({
             position: 'topRight',
             message: 'Please enter your search query'
         });
+        form.elements.search.value = '';
         return;
     }
     const searchParams = new URLSearchParams({
